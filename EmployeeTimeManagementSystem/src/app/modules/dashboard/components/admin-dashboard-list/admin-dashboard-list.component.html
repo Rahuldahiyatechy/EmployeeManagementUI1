@@ -1,0 +1,28 @@
+<div class="container">
+
+<div class="row float-left">
+  <h4 class="btn btn-info">Admin DashBoard</h4>
+</div>
+
+<!--<button type="button" class="btn btn-primary"
+        tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Simple demo
+</button>-->
+
+<div class="row float-right">
+  
+  <button type="button" class="btn btn-primary" tooltip="Employee" (click)="navigateToCreateNew()"><i class="fa fa-plus"></i> Add New Employee</button>
+    <button type="button" class="btn btn-primary" tooltip="Employee" (click)="navigateToCreateNew()">Reports</button>
+    <button type="button" class="btn btn-primary" tooltip="Employee" (click)="navigateToCreateNew()">Change Password</button>
+    <button type="button" class="btn btn-primary" tooltip="Employee" (click)="navigateToCreateNew()">Logout</button>
+  
+</div>
+
+
+
+<div class="table-responsive">
+  <table id="tblAdmin" class="display datatable-custom table table-striped table-responsive"
+         cellspacing="0" width="100%"></table>
+</div>
+
+</div>

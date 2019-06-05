@@ -1,0 +1,52 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav"  fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar class="btn btn-primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="/Attandance">Attandance</a>
+      <a mat-list-item href="/RegistrationEdit">Registration Edit</a>
+      <a mat-list-item href="/RegistrationList">Registration List</a>
+      
+      <a mat-list-item href="/Login">Login</a>
+
+      <a mat-list-item href="/AdminDashboardEdit">AdminDashboard Edit</a>
+      <a mat-list-item href="/AdminDashboardList">AdminDashboard List</a>
+      <a mat-list-item href="/UserDashboardList">UserDashboard List</a>
+      <a mat-list-item href="/UserDashboardEdit">UserDashboard Edit</a>
+      <a mat-list-item href="/DocumentEdit">Document Edit</a>
+      <a mat-list-item href="/DocumentList">Document List</a>
+    
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="btn btn-primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>EmployeeTimeManagementSystem</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- {path:'Attandance', component:AttandanceComponent, pathMatch:'full'},
+{path:'RegistrationEdit', component:RegistrationEditComponent},
+{path:'RegistrationList', component:RegistrationListComponent},
+{path:'Login', component:LoginComponent},
+{path:'AdminDashboardEdit', component:AdminDashboardEditComponent},
+{path:'AdminDashboardList', component:AdminDashboardListComponent},
+{path:'UserDashboardEdit', component:UserDashboardEditComponent},
+{path:'UserDashboardList', component:UserDashboardListComponent},
+{path:'DocumentEdit', component:DocumentEditComponent},
+{path:'DocumentList', component:DocumentListComponent}, -->
