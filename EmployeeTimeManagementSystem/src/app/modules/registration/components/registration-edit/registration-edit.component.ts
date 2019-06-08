@@ -12,4 +12,8 @@ export class RegistrationEditComponent implements OnInit {
   ngOnInit() {
   }
 
+  navigateToCreateNew()
+  {
+    console.log("hi");
+  }
 }

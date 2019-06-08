@@ -1,3 +1,115 @@
 <p>
   registration-edit works!
 </p>
+
+
+
+<!--<form class="example-form">-->
+  <!-- First Row-->
+  <div class="tfr-form col-xs-12 no-left-padding">
+  
+
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field >
+        <mat-label>Name *</mat-label>
+        <input  class="textbox" matInput placeholder="enter Name" [(ngModel)]="Registration.name" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field >
+        <mat-label>Password *</mat-label>
+        <input class="textbox" matInput placeholder="enter Password"  [(ngModel)]="Registration.password" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field>
+        <mat-label>Role *</mat-label>
+        <mat-select class="textbox" placeholder="Select your Role"  [(ngModel)]="Registration.roleid" autocomplete="off">
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- First Row end-->
+  <!-- Second Row-->
+  <div class="tfr-form col-xs-12 no-left-padding">
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field>
+        <mat-label>Date Of Joining *</mat-label>
+        <input class="textbox" matInput placeholder="enter date of joining"  [(ngModel)]="Registration.dateofjoining" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field>
+        <mat-label>Designation *</mat-label>
+        <input class="textbox" matInput placeholder="enter Designation" [(ngModel)]="Registration.designation" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field>
+        <mat-label>Phone *</mat-label>
+        <input  class="textbox" matInput placeholder="enter contact number" [(ngModel)]="Registration.phone" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field>
+        <mat-label>Date of Birth *</mat-label>
+        <input class="textbox" matInput placeholder="enter Date of Birth" [(ngModel)]="Registration.dateofbirth" autocomplete="off">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- 2 Row End-->
+  <!-- 3 Row Start-->
+  <div class="tfr-form col-xs-12 no-left-padding">
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field>
+        <mat-label>Home Town *</mat-label>
+        <input class="textbox" matInput placeholder="Enter home town" [(ngModel)]="Registration.hometown" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field>
+        <mat-label>District *</mat-label>
+        <input  class="textbox" matInput placeholder="Enter Disttrict"  [(ngModel)]="Registration.district" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field>
+        <mat-label>State *</mat-label>
+        <input class="textbox" matInput placeholder="Enter your State" [(ngModel)]="Registration.state" autocomplete="off">
+      </mat-form-field>
+    </div>
+
+
+    <div class="col-lg-3 col-md-3 no-left-padding">
+      <mat-form-field>
+        <mat-label>Zip Code *</mat-label>
+        <input class="textbox" matInput placeholder="enter your Zip Code" [(ngModel)]="Registration.zipcode"  autocomplete="off">
+      </mat-form-field>
+    </div>
+  </div>
+<!--</form>-->
+
+
+  <div class="container tfr-form">
+    <div class="row float-left">
+      <div class="">
+        <button type="button" class="btn btn-primary" tooltip="Employee" (click)="navigateToCreateNew()">Back</button>
+      </div>
+      <div style="margin-left:15px;">
+        <button type="button" class="btn btn-primary" tooltip="Employee" (click)="navigateToCreateNew()">Save Changes</button>
+
+      </div>
+
+    </div>
+    </div>

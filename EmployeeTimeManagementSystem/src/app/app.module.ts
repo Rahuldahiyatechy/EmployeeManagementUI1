@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,23 +28,31 @@ import { DocumentListComponent } from './modules/document/components/document-li
 import { MaterialModule } from './models/material';
 
 //service are the below
-import { TfrGridService} from './dataservices/tfr.grid.service';
+import { TfrGridService } from './dataservices/tfr.grid.service';
+import { RoleService} from './dataservices/role.service';
+
+import { RoleListComponent } from './modules/role/components/role-list/role-list.component';
+import { RoleEditComponent } from './modules/role/components/role-edit/role-edit.component';
 declare const $: any;
 
-const appRoutes: Routes=[
-{path:'Attandance', component:AttandanceComponent, pathMatch:'full'},
-{path:'RegistrationEdit', component:RegistrationEditComponent},
-{path:'RegistrationList', component:RegistrationListComponent},
-{path:'Login', component:LoginComponent},
-{path:'AdminDashboardEdit', component:AdminDashboardEditComponent},
-{path:'AdminDashboardList', component:AdminDashboardListComponent},
-{path:'UserDashboardEdit', component:UserDashboardEditComponent},
-{path:'UserDashboardList', component:UserDashboardListComponent},
-{path:'DocumentEdit', component:DocumentEditComponent},
-{path:'DocumentList', component:DocumentListComponent},
+//const appRoutes: Routes=[
+//{path:'Attandance', component:AttandanceComponent, pathMatch:'full'},
+//{path:'RegistrationEdit', component:RegistrationEditComponent},
+//{path:'RegistrationList', component:RegistrationListComponent},
+//{path:'Login', component:LoginComponent},
+//{path:'AdminDashboardEdit', component:AdminDashboardEditComponent},
+//{path:'AdminDashboardList', component:AdminDashboardListComponent},
+//{path:'UserDashboardEdit', component:UserDashboardEditComponent},
+//{path:'UserDashboardList', component:UserDashboardListComponent},
+//{path:'DocumentEdit', component:DocumentEditComponent},
+//{path:'DocumentList', component:DocumentListComponent},
+
+//{path:'RoleList', component:RoleListComponent},
+//{ path: 'RoleEdit', component: RoleEditComponent },
+//{ path: 'RoleEdit/edit/:id', component: RoleEditComponent },
 
 
-]
+//]
 
 @NgModule({
   declarations: [
@@ -59,13 +67,14 @@ const appRoutes: Routes=[
     UserDashboardEditComponent,
     UserDashboardListComponent,
     DocumentEditComponent,
-    DocumentListComponent
+    DocumentListComponent,
+    RoleListComponent,
+    RoleEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -74,12 +83,16 @@ const appRoutes: Routes=[
     MatListModule,
     MatCardModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
     TooltipModule.forRoot(),
+    HttpClientModule
     //MDBBootstrapModule.forRoot()
-    
+    //RouterModule.forRoot(appRoutes),
+
   ],
-  providers: [TfrGridService],
+  exports: [RouterModule],
+  providers: [TfrGridService, RoleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
